@@ -232,6 +232,9 @@ export default {
   },
   beforeMount() {
     this.checkIfDisabled();
+    if (this.checkIn !== null && this.checkOut == null) {
+      this.disableNextDays();
+    }
     this.checkIfHighlighted();
   },
 
